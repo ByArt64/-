@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "RU");
+
+    cout << "Пограмма которая провеяет, можно ли первую коробку положить внутрь второй\n";
+
+    int a, b, c, m, n, k;
+    cout << "Введие размеры A, B и C первой коробки: \n"; cin >> a >> b >> c;
+    cout << "Введите размеры M, N и K второй коробки: \n"; cin >> m >> n >> k;
+
+    if (a <= m && b <= n && c <= k || b <= m && a <= n && c <= k || a <= m && c <= n && b <= k || c <= m && a <= n && b <= k || c <= m && b <= n && a <= k || b <= m && c <= n && a <= k) {
+        cout << "Можно";
+    }
+    else {
+        cout << "Нельзя!";
+    }
+}
