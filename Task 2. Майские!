@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+
+	cout << "Программа-календарь для мая. Она проверяет выходной, выбанный день или рабочий\n";
+
+	int day;
+	int startMonth;
+
+	cout << "Введите день: "; cin >> day;
+
+	if (0 < day && day <= 31) {	
+		if ((1 <= day && day <= 10) || day % 7 == 0 || ((day += 1) % 7 == 0)) {
+			cout << "Выходной!:-)";
+		}
+		else {
+			cout << "Рабочий:-(";
+		}
+	}
+	else {
+		cout << "Не правильная дата, в Мае 31 день";
+	}
+}
