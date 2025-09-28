@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+
+	cout << "Программа-календарь для мая. Она проверяет выходной, выбанный день или рабочий\n";
+
+	int day;
+	int dayWeek;
+
+	cout << "Введите число: "; cin >> day;
+	cout << "Введите недели с которого начинается месяц (1 - понедеьник, 7 - воскресенье): "; cin >> dayWeek;
+
+	if (0 < day && day <= 31 || 0 < dayWeek && dayWeek <= 7) {
+		
+		int startDay = day + dayWeek;
+		
+		if (1 <= day && day <= 5 || 8 <= day && day <= 10 || startDay % 7 <= 1) {
+			cout << "Выходной!:-)";
+		}
+		else {
+			cout << "Рабочий:-(";
+		}
+	}
+	else {
+		cout << "Вы ввели либо не правильную дата, в Мае 31 день, либо неправильно день недели, в неделе всего 7 дней";
+	}
+}
