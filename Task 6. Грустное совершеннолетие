@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    setlocale(LC_ALL, "RU");
+
+    cout << "Программа для бармена, который не умеет считать.\n";
+
+    int currentYear, currentMonth, currentDay;
+    int yearBirth, monthBirth, birthDay;
+
+    cout << "Введие текущую дату (день, месяц, год): \n"; 
+    cin >> currentDay >> currentMonth >> currentYear;
+    cout << "Введите дату рождеия Клиента: \n"; 
+    cin >> birthDay >> monthBirth >> yearBirth;
+
+    int differenceYear = currentYear - yearBirth;
+    int differenceMonth = currentMonth - monthBirth;
+    int differenceDay = currentDay - birthDay;
+
+    if (differenceYear > 18 || (differenceYear == 18 && differenceMonth >= 0 && differenceDay > 0)) {
+        cout << "Можно продавать алкоголь!\n";
+    }
+    else {
+        cout << "Нельзя продавать алкоголь!\n";
+    }
+}
