@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+
+	cout << "Программа проверяет, правильным ли эшелоном летит самолёт\n";
+
+	int heightFlight;
+	int speedFlight;
+
+	cout << "Введие скорость самолета: "; cin >> speedFlight;
+	cout << "Введите высоту полета: "; cin >> heightFlight;
+
+	if ((750 <= speedFlight && speedFlight <= 850) && (9000 <= heightFlight && heightFlight <= 9500)) {	//Со скобками будто бы выглядит и читается лучше, чем без них
+		cout << "Эшелон выбран правильно";
+	}
+	else {
+		cout << "Эшелон выбран не правильно!";
+	}
+}
